@@ -1,0 +1,157 @@
+/*********************************************************
+                    Page Styling
+ *********************************************************/
+body {
+  margin: 0;
+}
+
+html {
+  background-color: rgb(177, 177, 177);
+  font-family: "Helvetica";
+  font-size: 16px;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+/*********************************************************
+                    Widget Styling
+ *********************************************************/
+.contact-widget {
+  border-radius: 15px;
+  width: 400px;
+  background-color: black;
+}
+
+.header,
+.footer {
+  display: flex;
+  background-color: #333333;
+  height: 60px;
+  color: rgb(255, 255, 255);
+}
+
+p {
+  margin: 0;
+  align-self: center;
+  padding-left: 20px;
+  font-size: 120%;
+}
+
+select {
+  align-self: center;
+  margin-right: 20px;
+}
+
+.header {
+  border-radius: 15px 15px 0 0;
+  justify-content: flex-start;
+}
+
+.footer {
+  border-radius: 0 0 15px 15px;
+  justify-content: flex-end;
+}
+
+/*********************************************************
+                    Contact List
+ *********************************************************/
+.contact-row {
+  display: flex;
+  height: 2.5rem;
+  position: relative;
+}
+
+.contact-name {
+  max-width: 180px;
+  flex-basis: 40%;
+  border-right: 1px solid rgb(23, 23, 23);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info {
+  letter-spacing: 1px;
+  color: #565656;
+  width: 70%;
+  padding-left: 10%;
+  display: flex;
+  align-items: center;
+}
+
+/* striped rows */
+.contact-row:nth-child(2n + 1) {
+  background-color: rgb(33, 33, 33);
+}
+.contact-row:nth-child(2n) {
+  background-color: #1a1a1a;
+}
+
+/*********************************************************
+                    Contact Detail Box
+ *********************************************************/
+.contact-info-complete {
+  letter-spacing: 1px;
+  color: white;
+  flex-basis: 60%;
+  background-color: rgb(72, 72, 72);
+  position: absolute;
+  z-index: 1;
+  padding: 0.65rem;
+}
+
+/* last 2 info boxes display go up */
+.contact-row:last-child .contact-info-complete {
+  top: -4.8rem;
+}
+.contact-row:nth-last-child(2) .contact-info-complete {
+  top: -4.8rem;
+}
+
+.contact-details {
+  padding: 0.25rem;
+}
+
+a {
+  color: #00f6ff;
+}
+
+.selected-contact {
+  background-color: rgb(72, 72, 72);
+  border: none;
+}
+
+.not-selected-contact {
+  opacity: 0.2;
+}
+
+/*********************************************************
+                    Status Circles
+ *********************************************************/
+.green,
+.red,
+.dull-yellow,
+.yellow {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  margin: 0 1rem;
+}
+
+.green {
+  background-color: #00ff1e;
+}
+
+.red {
+  background-color: #ff0000;
+}
+
+.dull-yellow {
+  background-color: #c3c118;
+}
+
+.yellow {
+  background-color: #fffc00;
+}
